@@ -1,1 +1,2 @@
 # itd210-portfolio
+Hello this is Cameron, I'm in the process of creating a fun visual learning site about the Paleozoic era. I used studio code and AI for my layouts and images. This site was create for an ITD 210 project.
