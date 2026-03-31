@@ -98,7 +98,22 @@
       </article>
     </div>
   </section>
-
+  <!--Joke Section-->
+<section class="fun-jokes">
+  <h2>Fun Break</h2>
+  <p class="lead">Everyone need a good laugh once in awhile! Click below to see a joke.</p>
+  
+  <button id="loadBtn" class="btn primary">Show a Joke</button>
+<!-- Message shown while the joke is being fetched. This is hidden by default -->
+  <p id="loadingMessage" style="display:none;">Fetching humor...</p>
+  <!-- Message shown if an error occurs while fetching a joke -->
+  <p id="errorMessage" style="color:red;"></p>
+<!-- Container where the fetched joke will be shown -->
+  <div id="dataContainer" class="fun-jokes-container"></div>
+  <!-- Link to the external JavaScript file -->
+  <script src="script.js"></script>
+</section>
+</main>
 </main>
 
 <!-- Footer -->
