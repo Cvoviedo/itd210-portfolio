@@ -693,6 +693,62 @@ display:flex;  /* horizontal nav */
 .mobile-toggle{
 display:none;
 }
+/* Fun Jokes Section */
+.fun-jokes {
+  padding: 40px 20px; /* Adds space inside the section */
+  text-align: center;
+  background: var(--card); /* Sets background color using a CSS variable */
+  border-top: 1px solid var(--line);
+  margin-top: 40px; /* Adds spacing above the section */
+}
+/* Styling for the section heading */
+.fun-jokes h2 {
+  font-size: 2rem;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+/* Styling for text */
+.fun-jokes .lead {
+  color: var(--ink);
+  margin-bottom: 24px; /* Space below the lead paragraph */
+  font-size: 1rem;
+}
+
+.fun-jokes-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; /* Stacks joke cards vertically */
+  gap: 20px;
+  justify-content: center; /* Centers cards vertically in container */
+  align-items: center; /* Centers cards horizontally */
+}
+
+.fun-jokes-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius); /* Rounded corners */
+  padding: 18px 24px;
+  max-width: 600px;
+  box-shadow: var(--shadow);
+  color: var(--ink);
+}
+
+#loadBtn {
+  cursor: pointer;
+  padding: 12px 24px;
+  font-family: "Syne Mono", monospace;
+  border-radius: 999px;
+  font-weight: bold;
+  border: 2px solid var(--accent); /* Button border color */
+  background: var(--accent);
+  color: #ffffff;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+#loadBtn:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px); /* Slight lift effect */
+}
 
 /* Mobile layout */
 @media (max-width:900px){
