@@ -3,10 +3,11 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Gallery</title>
+ <title>Gallery | Paleoexotic</title>
  <link rel="stylesheet" href="css/style.css">
  <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Syne+Mono&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 
 <body>
@@ -26,6 +27,7 @@
     <a class="active" href="gallery.html">Gallery</a>
     <a href="media.html">Media</a>
     <a href="timeline.html">Timeline</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
   <!-- Mobile Toggle -->
@@ -42,6 +44,7 @@
   <a href="gallery.html">Gallery</a>
   <a href="media.html">Media</a>
   <a href="timeline.html">Timeline</a>
+  <a href="contact.html">Contact</a>
 </nav>
 
 <main>
@@ -61,10 +64,16 @@
 </div>
 <!---- Hero text ---->
   <div class="hero-inner">
-    <p class="hero-kicker">Earth’s Ancient Past</p>
-    <h1>Paleozoic Gallery</h1>
-    <p>Explore life across Earth’s earliest geological ecosystems.</p>
-  </div>
+
+  <p class="hero-kicker reveal">Earth’s Ancient Past<i class="ph ph-leaf"></i></p>
+
+  <h1 class="reveal">Paleozoic Gallery</h1>
+
+  <p class="reveal">
+    Explore life across Earth’s earliest geological ecosystems.
+  </p>
+
+</div>
 
 </section>
 
@@ -73,19 +82,19 @@
 
   <div class="section-inner">
 
-    <h2>Fossil Slideshows</h2><br>
+    <h2 class="reveal">Fossil Slideshows</h2><br>
 
-    <p class="lead">
+<p class="lead reveal">
       Each slideshow shows a Paleozoic period, from simple ocean life to more complex land ecosystems.
     </p><br>
 
     <!-- Grid Gallery-->
     <!-- Each gallery card contains a 3-image slideshow, totaling 18 images -->
   
-   <div class="gallery-grid">
+   <div class="gallery-grid reveal">
 
   <!-- Cambrian -->
-  <article class="gallery-card">
+  <article class="gallery-card reveal">
     <img id="img0" alt="Cambrian marine life including trilobites and early sea life.">
     <p class="animal" id="cap0"></p> <!---- animal name card---->
     <p class="period" id="period0"></p> <!---- time period card---->
@@ -95,7 +104,7 @@
   </article>
 
   <!-- Ordovician -->
-  <article class="gallery-card">
+  <article class="gallery-card reveal">
     <img id="img1" alt="Ordovician ocean life including Brachiopods and Cephalopods.">
     <p class="animal" id="cap1"></p>
     <p class="period" id="period1"></p>
@@ -105,7 +114,7 @@
   </article>
 
   <!-- Silurian -->
-  <article class="gallery-card">
+  <article class="gallery-card reveal">
     <img id="img2" alt="Silurian early land plants and jawed fish.">
     <p class="animal" id="cap2"></p>
     <p class="period" id="period2"></p>
@@ -115,7 +124,7 @@
   </article>
 
   <!-- Devonian -->
-  <article class="gallery-card">
+  <article class="gallery-card reveal">
     <img id="img3" alt="Devonian age of fish and early forest ecosystems.">
     <p class="animal" id="cap3"></p>
     <p class="period" id="period3"></p>
@@ -125,7 +134,7 @@
   </article>
 
   <!-- Carboniferous -->
-  <article class="gallery-card">
+  <article class="gallery-card reveal">
     <img id="img4" alt="Carboniferous giant insect and swamp forests.">
     <p class="animal" id="cap4"></p>
     <p class="period" id="period4"></p>
@@ -135,7 +144,7 @@
   </article>
 
   <!-- Permian -->
-  <article class="gallery-card">
+  <article class="gallery-card reveal">
     <img id="img5" alt="Permian reptiles including Dimetrodon and early gymnosperm plants.">
     <p class="animal" id="cap5"></p>
     <p class="period" id="period5"></p>
@@ -165,7 +174,7 @@
 <script>
   const data = [
   [
-    ["Trilobites","Crinoids","Hallucigenia"], //your data stays the same
+    ["Trilobites","Crinoids","Hallucigenia"], //data stays the same
     "Cambrian Period",
     [
       "Marine arthropods that dominated early oceans.",
@@ -261,4 +270,22 @@ const nav = document.getElementById("mobileNav");
 toggle.addEventListener("click", () => {
   nav.classList.toggle("open");
 });
+</script>
+<!--Scroll and reveal -->
+<script>
+function revealOnScroll() {
+  const reveals = document.querySelectorAll(".reveal");
+
+  reveals.forEach((el) => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+
+    if (elementTop < windowHeight - 140) {
+      el.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
 </script>
