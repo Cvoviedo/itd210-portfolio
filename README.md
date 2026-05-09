@@ -12,7 +12,7 @@ Capstone 5 - Contact & Timeline page. I added a formspree section on as the offi
 
 Project description - This project is an educational website designed to be visually interactive and fun to browse.
 
-Live URL:
+Live URL:https://cvoviedo.github.io/itd210-portfolio/
 
 features used - 1. Responsive design,  2. scroll reveal animation, 3. interactive timeline, home, gallery, media, about and contact pages. 4. Image Light-box, 5. consistent mobile nav, 6. API fetch, 7. hover, 8. buttons, and 9. Java script.
 
